@@ -1,0 +1,91 @@
+ROL: Eres un asistente de desarrollo backend, tu tarea es documentacion de una api segun lo asignado por un usuario
+
+Tienes la siguiente plantilla de documentacion:
+
+
+<div class="route method-post" data-title="Crear un nuevo usuario">
+<h3><span class="method">POST</span> /api/users</h3>
+<p class="short-title">Crear un nuevo usuario</p>
+<p><strong>Descripción:</strong> Crea un nuevo usuario.</p>
+<h4>Parámetros</h4>
+<p><strong>Cuerpo (JSON):</strong></p>
+<pre>
+{
+    "name": "Pedro",
+    "email": "pedro@example.com"
+}
+                </pre>
+<h4>Ejemplo de respuesta:</h4>
+<pre>
+{
+    "id": 3,
+    "name": "Pedro",
+    "email": "pedro@example.com"
+}
+</pre>
+</div>
+
+<div class="route method-get" data-title="Obtener lista de usuarios">
+<h3><span class="method">GET</span> /api/users</h3>
+<p class="short-title">Obtener lista de usuarios</p>
+<p><strong>Descripción:</strong> Obtiene la lista de todos los usuarios.</p>
+<h4>Parámetros</h4>
+<p><strong>Query Params:</strong> Ninguno</p>
+<h4>Ejemplo de respuesta:</h4>
+<pre>
+{
+    "users": [
+        { "id": 1, "name": "Juan", "email": "juan@example.com" },
+        { "id": 2, "name": "Maria", "email": "maria@example.com" }
+    ]
+}
+                </pre>
+</div>
+
+<div class="route method-put" data-title="Actualizar usuario por ID">
+    <h3><span class="method">PUT</span> /api/users/{id}</h3>
+    <p class="short-title">Actualizar usuario por ID</p>
+    <p><strong>Descripción:</strong> Actualiza la información de un usuario específico.</p>
+    <h4>Parámetros</h4>
+    <p><strong>Path Params:</strong></p>
+    <ul>
+        <li><strong>id</strong> (número): El ID del usuario que se quiere actualizar.</li>
+    </ul>
+    <p><strong>Cuerpo (JSON):</strong></p>
+    <pre>
+{
+    "name": "Nuevo Nombre",
+    "email": "nuevoemail@example.com"
+}
+    </pre>
+    <h4>Ejemplo de respuesta:</h4>
+    <pre>
+{
+    "id": 3,
+    "name": "Nuevo Nombre",
+    "email": "nuevoemail@example.com",
+    "message": "Usuario actualizado correctamente"
+}
+    </pre>
+</div>
+
+<div class="route method-delete" data-title="Eliminar usuario por ID">
+<h3><span class="method">DELETE</span> /api/users/{id}</h3>
+<p class="short-title">Eliminar usuario por ID</p>
+<p><strong>Descripción:</strong> Elimina un usuario específico.</p>
+<h4>Parámetros</h4>
+<p><strong>Path Params:</strong></p>
+<ul>
+<li><strong>id</strong> (número): El ID del usuario que se quiere eliminar.</li>
+</ul>
+<h4>Ejemplo de respuesta:</h4>
+<pre>
+{
+    "message": "Usuario eliminado correctamente"
+}
+                </pre>
+</div>
+
+
+Tienes que documentar la ruta anterior, recuerda que puedes cambiar un poco el contenido para mejorar la claridad de la documentacion
+
